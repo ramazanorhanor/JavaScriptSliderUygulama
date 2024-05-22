@@ -24,11 +24,10 @@ https://fontawesome.com/search?o=r&m=free
 git push -u origin master
 warning: ----------------- SECURITY WARNING ----------------
 warning: | TLS certificate verification has been disabled! |
-
 git config --global http.sslBackend schannel
+
+
 git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
-
-
 error: remote origin already exists.
 git remote remove origin
 
@@ -48,3 +47,66 @@ git push -u origin main
 git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
 git branch -M main
 git push -u origin main
+------------------------------------------------
+toplu halde git notlari
+Github'da Repository oluşturma, Proje gönderme ve Commit etme
+
+Aşama 1
+$ git init 
+com.ramazan.model (master)
+master geçtik (bu satır bilgilendirme amaçlı)
+
+Aşama 2
+$ git add .
+
+Aşama 3
+$ git commit -m "javaSpring projesi git commit -m komutu" 
+
+Aşama  4 
+$ git remote add origin https://github.com/ramazanorhanor/javaSpring.git
+
+Aşama 5
+$ git push -u origin master 
+
+Projeyi gönderdik
+
+Şimdi ise bir değişiklik yaptığımızda projeyi tekrardan nasıl göndeririz onun komutlarını yazıyoruz
+
+ 
+1.Aşama
+$ git add .
+
+2.Aşama
+$ git commit -m "word dosyası ekledik"
+
+3.Aşama
+$ git push -u origin master
+
+
+or create a new repository on the command line
+
+echo "# ileri-seviye-javaBtk" >> README.md
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/ramazanorhanor/ileri-seviye-javaBtk.git
+git push -u origin master
+
+         
+…or push an existing repository from the command line
+git remote add origin https://github.com/ramazanorhanor/ileri-seviye-javaBtk.git
+git branch -M master
+git push -u origin master
+
+hata 
+error: remote origin already exists. 
+çözümü 
+git remote remove origin 
+
+
+hata 
+ SSL certificate problem: self signed certificate in certificate chain 
+çözüm 
+ git config --global http.sslBackend schannel
