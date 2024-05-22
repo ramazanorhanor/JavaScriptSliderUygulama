@@ -73,7 +73,7 @@ function showSlide(diziIndex) {
      //<a class="card-link" href="#"> daha fazlası için tıkla </a>
 }
 
-var intervalStartStop;;
+var intervalStartStop;
 document.querySelectorAll(".intervalStartStop").forEach(function(item){
     item.addEventListener("mouseenter",function(){
         clearInterval(intervalStartStop);
@@ -111,9 +111,9 @@ function init(settings) {
             beforeNumber = index;
         } else {
 
-            if (slaytCount == index + 1) {
-                index=-1;
-            }            
+            // if (slaytCount == index + 1) {
+            //     index=-1;
+            // }            
             showSlide(index);
             index++;
         }
