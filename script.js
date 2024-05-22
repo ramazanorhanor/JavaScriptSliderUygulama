@@ -29,28 +29,24 @@ var models = [
         link: "https://www.istockphoto.com/tr/foto%C4%9Fraf/gri-spor-araba-bir-g%C3%BCnbat%C4%B1m%C4%B1-yolda-s%C3%BCr%C3%BC%C5%9F-gm1291591346-386662683"
     },
     {
-        name: "bmw 7",
-        image: "resimlerim/araba7.jpg",
+        name: "bmw 7", //  <h6 class="card-title">araba1</h6>
+        image: "resimlerim/araba7.jpg", //<img class="card-img-top" src="resimlerim/araba1.jpg" />
         link: "https://www.istockphoto.com/tr/foto%C4%9Fraf/ticari-van-%C5%9Fehir-s%C3%BCr%C3%BC%C5%9F-gm985947582-267472587"
+        //<a class="card-link" href="#"> daha fazlası için tıkla </a>
     }
 ]
 var index = 0;
 var slaytCount = models.length;
-var intervalStartStop;
-var settings = {
-    random: false,
-    interval: '1000'
-}
-// not = init fonksiyonundan önce settings objesi yazılmalıdır.
-// yani 1 settings yaz // 2 init kullan 
-init(settings);
 
+//   <i class="fas fa-arrow-circle-left fa-3x intervalStartStop"></i>
 // sol ok tılayınca bir önceki resmin gelemsini sağlar 
 document.querySelector(".fa-arrow-circle-left").addEventListener("click", function () {
     index--;
     showSlide(index);
     console.log(index);
 });
+
+//<i class="fas fa-arrow-circle-right fa-3x intervalStartStop"></i>
 // sağ ok tılayınca bir sonraki resmin gelemsini sağlar 
 document.querySelector(".fa-arrow-circle-right").addEventListener("click", function () {
     index++;
@@ -66,11 +62,18 @@ function showSlide(diziIndex) {
     if (diziIndex < 0) {
         index = slaytCount - 1;
     }
-    document.querySelector(".card-img-top").setAttribute("src", models[index].image);
-    document.querySelector(".card-title").textContent = models[index].name;
+
+    document.querySelector(".card-title").textContent = models[index].name; 
+    //  <h6 class="card-title">araba1</h6>
+
+    document.querySelector(".card-img-top").setAttribute("src", models[index].image); 
+    //<img class="card-img-top" src="resimlerim/araba1.jpg" />
+
     document.querySelector(".card-link").setAttribute("href", models[index].link)
+     //<a class="card-link" href="#"> daha fazlası için tıkla </a>
 }
 
+var intervalStartStop;;
 document.querySelectorAll(".intervalStartStop").forEach(function(item){
     item.addEventListener("mouseenter",function(){
         clearInterval(intervalStartStop);
@@ -82,6 +85,14 @@ document.querySelectorAll(".intervalStartStop").forEach(function(item){
         })
     });
 
+    var settings = {
+        random: false,
+        interval: '1000'
+    }
+    // not = init fonksiyonundan önce settings objesi yazılmalıdır.
+    // yani 1 settings yaz // 2 init kullan 
+    init(settings);
+    
 function init(settings) {
     // setTimeout() // declare function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
     // bir kere çalışır
