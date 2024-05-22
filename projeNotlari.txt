@@ -1,0 +1,15 @@
+https://cdnjs.com/libraries/font-awesome
+
+
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+bootstrap js 
+popper js 
+jquery js
+
+bootstrap css 
+
+https://getbootstrap.com/docs/5.3/components/card/
+
+https://www.istockphoto.com/tr/search/search-by-asset?assetid=187037290&assettype=image
+
+https://fontawesome.com/search?o=r&m=free
