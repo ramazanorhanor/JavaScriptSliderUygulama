@@ -13,3 +13,38 @@ https://getbootstrap.com/docs/5.3/components/card/
 https://www.istockphoto.com/tr/search/search-by-asset?assetid=187037290&assettype=image
 
 https://fontawesome.com/search?o=r&m=free
+
+
+
+ git init
+ git add .
+ git commit -m "javaScript slider uygulamasi"
+ git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
+
+git push -u origin master
+warning: ----------------- SECURITY WARNING ----------------
+warning: | TLS certificate verification has been disabled! |
+
+git config --global http.sslBackend schannel
+git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
+
+
+error: remote origin already exists.
+git remote remove origin
+
+
+
+…or create a new repository on the command line
+echo "# JavaScriptSliderUygulama" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/ramazanorhanor/JavaScriptSliderUygulama.git
+git branch -M main
+git push -u origin main

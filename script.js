@@ -42,15 +42,16 @@ var settings = {
     interval: '1000'
 }
 // not = init fonksiyonundan önce settings objesi yazılmalıdır.
-// yani 1 settings yaz  2 init kullan 
+// yani 1 settings yaz // 2 init kullan 
 init(settings);
 
+// sol ok tılayınca bir önceki resmin gelemsini sağlar 
 document.querySelector(".fa-arrow-circle-left").addEventListener("click", function () {
     index--;
     showSlide(index);
     console.log(index);
 });
-
+// sağ ok tılayınca bir sonraki resmin gelemsini sağlar 
 document.querySelector(".fa-arrow-circle-right").addEventListener("click", function () {
     index++;
     showSlide(index);
@@ -82,7 +83,6 @@ document.querySelectorAll(".intervalStartStop").forEach(function(item){
     });
 
 function init(settings) {
-
     // setTimeout() // declare function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
     // bir kere çalışır
 
@@ -102,8 +102,7 @@ function init(settings) {
 
             if (slaytCount == index + 1) {
                 index=-1;
-            }
-            
+            }            
             showSlide(index);
             index++;
         }
